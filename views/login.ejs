@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+</head>
+
+<body>
+  <button id="login">login</button>
+</body>
+
+</html>
+
+<script>
+  function gentext(n) {
+    var str = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    var tmp = '';
+    for (var i = 0; i < n; i++) {
+      tmp += str.charAt(Math.floor(Math.random() * str.length));
+    }
+    return tmp;
+  }
+  document.getElementById('login').addEventListener('click', () => {
+    fetch('http://<%=data.gw_address%>:<%=data.gw_port%>/wifidog/auth?gw_sn=<%=data.gw_sn%>&gw_id=<%=data.gw_id%>&stage=login&ip=<%=data.ip%>&mac=<%=data.mac%>&token=' + gentext(20) + '&incoming=0&outgoing=0&vlanid=1'
+      , {
+        method: 'GET'
+      }).then(res => {
+        console.log(res);
+      })
+  });
+</script>

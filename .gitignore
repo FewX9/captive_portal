@@ -1,0 +1,6 @@
+node_modules/
+*.todo
+package-lock.json
+.VSCodeCounter
+.env
+README.md
