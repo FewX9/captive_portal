@@ -48,7 +48,6 @@ app.get("/auth", (req, res) => {
   res.send({
     auth: 1,
     username: "13811110000",
-    usergroup: "/ruijie",
     url: "http://www.ruijie.com.cn",
     timeout: 60,
     uplinklimit: 10240,
@@ -57,6 +56,3 @@ app.get("/auth", (req, res) => {
 });
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
-
-// http://captive-portal.ifew.me
-// 128.199.172.245
