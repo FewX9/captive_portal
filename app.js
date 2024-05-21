@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 require("dotenv").config();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 80;
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
