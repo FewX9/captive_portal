@@ -48,7 +48,7 @@ app.get("/auth", (req, res) => {
   res.send({
     auth: 1,
     username: "13811110000",
-    url: "http://www.ruijie.com.cn",
+    url: "/login?data=123456",
     timeout: 60,
     uplinklimit: 10240,
     downlinklimit: 10240,
